@@ -133,6 +133,7 @@
 
     a strong.typeahead-strong-section {
         white-space: pre;
+        overflow: hidden;
         /* Present as flexbox to better control
            icon alignment and spacing, when icons
            are shown. */
@@ -141,8 +142,15 @@
         /* Approximate space as preserved in
            typeahead lines, e.g., between the channel
            name and its description. */
-        gap: 0.25ch;
+        gap: 1ch;
         font-weight: 500;
+    }
+
+    a strong.typeahead-strong-section .stream-name {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 200px;
     }
 }
 
